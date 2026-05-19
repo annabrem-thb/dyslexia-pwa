@@ -1,0 +1,1573 @@
+// vocabularyDE.js — Erwachsene mit Legasthenie — Deutsche Ausgabe v1
+// 15 Einträge pro Kategorie
+// Schwerpunkte: ie/ei-Verwechslung, ss/ß, dass/das, ä/e/ö/u-Verwechslung,
+//   Groß-/Kleinschreibung, stimmhafte Auslautverhärtung (d→t, b→p, g→k),
+//   Dehnungs-h, Fremdwörter mit ph/v/qu, Doppelkonsonanten, Komposita.
+// Hinweissprachen: DE (primär) / PL / EN
+
+export const wordDatabaseDE = {
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: PHONEM
+  // Wörter, deren Aussprache bei Legasthenikern zu Leseblockaden führt:
+  // Anlautcluster, unbekannte Lautmuster, Fremdwortbetonung.
+  // ─────────────────────────────────────────────────────────────────────────────
+  phonemes: [
+    {
+      id: 1,
+      word: 'Psychiatrie',
+      phonetic: '/ psyçiˈatʁiː /',
+      hints: {
+        de: 'Fachbereich der Medizin, der sich mit psychischen Erkrankungen befasst',
+        pl: 'Dziedzina medycyny zajmująca się chorobami psychicznymi',
+        en: 'Branch of medicine dealing with mental disorders',
+      },
+    },
+    {
+      id: 2,
+      word: 'Rhythmus',
+      phonetic: '/ ˈʁʏtmʊs /',
+      hints: {
+        de: 'Regelmäßige Folge von betonten und unbetonten Elementen in Musik oder Sprache',
+        pl: 'Regularny wzorzec akcentowanych i nieakcentowanych elementów w muzyce lub mowie',
+        en: 'Regular pattern of stressed and unstressed elements in music or speech',
+      },
+    },
+    {
+      id: 3,
+      word: 'Choreographie',
+      phonetic: '/ koʁeoɡʁaˈfiː /',
+      hints: {
+        de: 'Die Kunst, Tanzschritte und Bewegungen zu einem Stück zu gestalten',
+        pl: 'Sztuka komponowania kroków tanecznych i ruchów do utworu',
+        en: 'The art of designing and arranging dance movements',
+      },
+    },
+    {
+      id: 4,
+      word: 'Qualifikation',
+      phonetic: '/ kvaːlɪfɪkaˈt͡si̯oːn /',
+      hints: {
+        de: 'Nachweis von Fähigkeiten oder Ausbildung, die für eine Stelle erforderlich sind',
+        pl: 'Potwierdzenie umiejętności lub wykształcenia wymaganego na danym stanowisku',
+        en: 'Proof of skills or training required for a position',
+      },
+    },
+    {
+      id: 5,
+      word: 'Verantwortung',
+      phonetic: '/ fɛˈʁantvɔʁtʊŋ /',
+      hints: {
+        de: 'Die Pflicht, für eigene Handlungen und deren Folgen einzustehen',
+        pl: 'Obowiązek ponoszenia odpowiedzialności za własne działania i ich konsekwencje',
+        en: "The duty to be accountable for one's actions and their consequences",
+      },
+    },
+    {
+      id: 6,
+      word: 'Pflichtverletzung',
+      phonetic: '/ ˈpflɪçtfɛʁˌlɛt͡sʊŋ /',
+      hints: {
+        de: 'Die Nichteinhaltung einer gesetzlichen oder beruflichen Verpflichtung',
+        pl: 'Niedopełnienie obowiązku prawnego lub zawodowego',
+        en: 'Failure to fulfil a legal or professional obligation',
+      },
+    },
+    {
+      id: 7,
+      word: 'Gleichgewicht',
+      phonetic: '/ ˈɡlaɪ̯çɡəˌvɪçt /',
+      hints: {
+        de: 'Zustand der ausgeglichenen Verteilung von Kräften oder Einflüssen',
+        pl: 'Stan równomiernego rozłożenia sił lub wpływów',
+        en: 'State of balanced distribution of forces or influences',
+      },
+    },
+    {
+      id: 8,
+      word: 'Schlüsselkompetenz',
+      phonetic: '/ ˈʃlʏsl̩kɔmpəˌtɛnt͡s /',
+      hints: {
+        de: 'Grundlegende Fähigkeit, die in vielen Lebensbereichen entscheidend ist',
+        pl: 'Podstawowa umiejętność kluczowa w wielu obszarach życia',
+        en: 'Fundamental skill that is decisive in many areas of life',
+      },
+    },
+    {
+      id: 9,
+      word: 'Zwischenmenschlich',
+      phonetic: '/ ˈt͡svɪʃn̩ˌmɛnʃlɪç /',
+      hints: {
+        de: 'Bezieht sich auf die Beziehungen und Interaktionen zwischen Personen',
+        pl: 'Odnosi się do relacji i interakcji między osobami',
+        en: 'Relating to relationships and interactions between people',
+      },
+    },
+    {
+      id: 10,
+      word: 'Ursprünglich',
+      phonetic: '/ ˈuːɐ̯ʃpʁʏŋlɪç /',
+      hints: {
+        de: 'Von Anfang an vorhanden; dem ursprünglichen Zustand entsprechend',
+        pl: 'Istniejący od początku; odpowiadający pierwotnemu stanowi',
+        en: 'Present from the beginning; corresponding to the original state',
+      },
+    },
+    {
+      id: 11,
+      word: 'Gesellschaft',
+      phonetic: '/ ɡəˈzɛlʃaft /',
+      hints: {
+        de: 'Eine organisierte Gemeinschaft von Menschen mit gemeinsamen Werten und Regeln',
+        pl: 'Zorganizowana wspólnota ludzi z wspólnymi wartościami i zasadami',
+        en: 'An organised community of people with shared values and rules',
+      },
+    },
+    {
+      id: 12,
+      word: 'Beschleunigung',
+      phonetic: '/ bəˈʃlɔʏ̯nɪɡʊŋ /',
+      hints: {
+        de: 'Die Zunahme der Geschwindigkeit eines Objekts oder Vorgangs über die Zeit',
+        pl: 'Wzrost prędkości obiektu lub procesu w czasie',
+        en: 'The increase in speed of an object or process over time',
+      },
+    },
+    {
+      id: 13,
+      word: 'Höchstgeschwindigkeit',
+      phonetic: '/ ˈhøːçstɡəˌʃvɪndɪçkaɪ̯t /',
+      hints: {
+        de: 'Die gesetzlich oder technisch maximal zulässige Geschwindigkeit',
+        pl: 'Maksymalna prędkość dopuszczona przez prawo lub technicznie',
+        en: 'The legally or technically maximum permitted speed',
+      },
+    },
+    {
+      id: 14,
+      word: 'Ausschließlich',
+      phonetic: '/ ˈaʊ̯sʃliːslɪç /',
+      hints: {
+        de: 'Nur und allein; ohne jede Ausnahme oder Einschränkung',
+        pl: 'Wyłącznie i jedynie; bez żadnego wyjątku lub ograniczenia',
+        en: 'Only and solely; without any exception or restriction',
+      },
+    },
+    {
+      id: 15,
+      word: 'Widersprüchlich',
+      phonetic: '/ ˈviːdɐʃpʁʏçlɪç /',
+      hints: {
+        de: 'In sich unvereinbar; verschiedene Aussagen, die sich gegenseitig ausschließen',
+        pl: 'Wewnętrznie sprzeczny; różne twierdzenia wzajemnie się wykluczające',
+        en: 'Internally inconsistent; different statements that mutually exclude each other',
+      },
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: GRAPHEM
+  // 15 deutsche Rechtschreibregeln — häufigste Fehlerquellen bei Legasthenikern.
+  // ─────────────────────────────────────────────────────────────────────────────
+  graphemes: [
+    {
+      id: 1,
+      focus: 'ie / ei — Verwechslung der Vokalkombinationen',
+      questions: {
+        de: "Welches Wort wird mit ‚ie' geschrieben? (sprich: langes i)",
+        pl: "Które słowo pisze się przez ‚ie'? (wymawia się jako długie i)",
+        en: "Which word is written with 'ie'? (pronounced as a long i)",
+      },
+      options: [
+        { text: 'Brief', isCorrect: true, icon: '✉️' },
+        { text: 'Klein', isCorrect: false, icon: '🤏' },
+      ],
+    },
+    {
+      id: 2,
+      focus: 'dass / das — subordinating conjunction vs. article/pronoun',
+      questions: {
+        de: "Welches ‚dass' / ‚das' passt? — Ich glaube, ___ er kommt.",
+        pl: "Które ‚dass' / ‚das' pasuje? — Wierzę, ___ że on przyjdzie.",
+        en: "Which 'dass'/'das' fits? — I believe ___ he is coming.",
+      },
+      options: [
+        { text: 'dass', isCorrect: true, icon: '💬' },
+        { text: 'das', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 3,
+      focus: 'ss / ß — nach kurzem Vokal ss, nach langem Vokal/Diphthong ß',
+      questions: {
+        de: 'Welche Schreibung ist korrekt? — Ich ___e die Straße entlang.',
+        pl: 'Która pisownia jest poprawna? — Idę wzdłuż ulicy.',
+        en: 'Which spelling is correct? — I walk along the street.',
+      },
+      options: [
+        { text: 'Straße', isCorrect: true, icon: '🛣️' },
+        { text: 'Strasse', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 4,
+      focus: 'Auslautverhärtung — d → t am Wortende',
+      questions: {
+        de: "Wie lautet die korrekte Schreibung? (der Plural ist ‚Hunde')",
+        pl: "Jak brzmi poprawna pisownia? (liczba mnoga to ‚Hunde')",
+        en: "What is the correct spelling? (the plural is 'Hunde')",
+      },
+      options: [
+        { text: 'Hund', isCorrect: true, icon: '🐕' },
+        { text: 'Hunt', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 5,
+      focus: 'Auslautverhärtung — b → p am Wortende',
+      questions: {
+        de: "Wie lautet die korrekte Schreibung? (der Plural ist ‚Diebe')",
+        pl: "Jak brzmi poprawna pisownia? (liczba mnoga to ‚Diebe')",
+        en: "What is the correct spelling? (the plural is 'Diebe')",
+      },
+      options: [
+        { text: 'Dieb', isCorrect: true, icon: '🦹' },
+        { text: 'Diep', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 6,
+      focus: 'Auslautverhärtung — g → k am Wortende',
+      questions: {
+        de: "Wie lautet die korrekte Schreibung? (der Plural ist ‚Tage')",
+        pl: "Jak brzmi poprawna pisownia? (liczba mnoga to ‚Tage')",
+        en: "What is the correct spelling? (the plural is 'Tage')",
+      },
+      options: [
+        { text: 'Tag', isCorrect: true, icon: '📅' },
+        { text: 'Tak', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 7,
+      focus: 'Dehnungs-h — stilles h nach langem Vokal',
+      questions: {
+        de: "Welche Schreibung des Wortes für ‚Verkehrsmittel auf Schienen' ist korrekt?",
+        pl: "Która pisownia słowa oznaczającego ‚środek transportu szynowego' jest poprawna?",
+        en: "Which spelling of the word for 'rail transport' is correct?",
+      },
+      options: [
+        { text: 'Bahn', isCorrect: true, icon: '🚂' },
+        { text: 'Ban', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 8,
+      focus: 'Großschreibung — Substantive groß, Adjektive klein',
+      questions: {
+        de: 'Was ist korrekt? Der ___ Lehrer erklärte das Thema sehr gut.',
+        pl: 'Co jest poprawne? Dobry nauczyciel wyjaśnił temat bardzo dobrze.',
+        en: 'What is correct? The good teacher explained the topic very well.',
+      },
+      options: [
+        { text: 'gute', isCorrect: true, icon: '👨‍🏫' },
+        { text: 'Gute', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 9,
+      focus: 'v → f-Laut in einheimischen Wörtern',
+      questions: {
+        de: 'Welches einheimische Wort beginnt mit v, wird aber wie f gesprochen?',
+        pl: 'Które rodzime słowo zaczyna się od v, ale wymawia się jak f?',
+        en: 'Which native German word starts with v but is pronounced like f?',
+      },
+      options: [
+        { text: 'Vogel', isCorrect: true, icon: '🐦' },
+        { text: 'Vase', isCorrect: false, icon: '🪴' },
+      ],
+    },
+    {
+      id: 10,
+      focus: 'ph = f in Fremdwörtern',
+      questions: {
+        de: 'Welche Schreibung des Fachs für Körperpflege und Medikamente ist korrekt?',
+        pl: 'Która pisownia określenia placówki z lekami i produktami do higieny jest poprawna?',
+        en: 'Which spelling of the word for the shop selling medicines is correct?',
+      },
+      options: [
+        { text: 'Apotheke', isCorrect: true, icon: '💊' },
+        { text: 'Apoteke', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 11,
+      focus: 'ä / e — Umlaut vs. einfacher Vokal',
+      questions: {
+        de: "Welche Schreibung ist korrekt? (Plural von Gast ist ‚Gäste')",
+        pl: "Która pisownia jest poprawna? (liczba mnoga od ‚Gast' to ‚Gäste')",
+        en: 'Which spelling is correct? (the plural of Gast is Gäste)',
+      },
+      options: [
+        { text: 'Gäste', isCorrect: true, icon: '👥' },
+        { text: 'Geste', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 12,
+      focus:
+        'Doppelkonsonant — kurzer Vokal verdoppelt den folgenden Konsonanten',
+      questions: {
+        de: "Welche Schreibung bedeutet ‚Menge / Anzahl'?",
+        pl: "Która pisownia oznacza ‚ilość / liczba'?",
+        en: "Which spelling means 'quantity / number'?",
+      },
+      options: [
+        { text: 'Summe', isCorrect: true, icon: '🔢' },
+        { text: 'Sume', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 13,
+      focus: 'ch vs. k in Fremdwörtern (griechisches ch = k)',
+      questions: {
+        de: 'Welche Schreibung bezeichnet die Wissenschaft vom Leben?',
+        pl: 'Która pisownia oznacza naukę o życiu?',
+        en: 'Which spelling denotes the science of living organisms?',
+      },
+      options: [
+        { text: 'Chemie', isCorrect: true, icon: '⚗️' },
+        { text: 'Kemie', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 14,
+      focus: 'zusammengeschriebene Komposita',
+      questions: {
+        de: 'Komposita werden im Deutschen zusammengeschrieben. Welche Schreibung ist korrekt?',
+        pl: 'Złożenia w języku niemieckim pisze się łącznie. Która pisownia jest poprawna?',
+        en: 'Compound nouns in German are written as one word. Which spelling is correct?',
+      },
+      options: [
+        { text: 'Arbeitsvertrag', isCorrect: true, icon: '📝' },
+        { text: 'Arbeits Vertrag', isCorrect: false, icon: '❌' },
+      ],
+    },
+    {
+      id: 15,
+      focus: '-tion Fremdwortsuffix — immer mit t, nie mit z',
+      questions: {
+        de: "Welche Schreibung des Begriffs für ‚Vorgang des Informierens' ist korrekt?",
+        pl: "Która pisownia terminu oznaczającego ‚proces informowania' jest poprawna?",
+        en: "Which spelling of the term for 'the process of informing' is correct?",
+      },
+      options: [
+        { text: 'Information', isCorrect: true, icon: 'ℹ️' },
+        { text: 'Informazion', isCorrect: false, icon: '❌' },
+      ],
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: SILBEN
+  // Lange Komposita und Fremdwörter — typische Leseblockaden bei Erwachsenen.
+  // ─────────────────────────────────────────────────────────────────────────────
+  syllables: [
+    {
+      id: 1,
+      word: 'Verantwortung',
+      segments: ['Ver', 'ant', 'wor', 'tung'],
+      icon: '⚖️',
+    },
+    {
+      id: 2,
+      word: 'Beschäftigung',
+      segments: ['Be', 'schäf', 'ti', 'gung'],
+      icon: '💼',
+    },
+    {
+      id: 3,
+      word: 'Arbeitslosigkeit',
+      segments: ['Ar', 'beits', 'lo', 'sig', 'keit'],
+      icon: '📉',
+    },
+    {
+      id: 4,
+      word: 'Krankenversicherung',
+      segments: ['Kran', 'ken', 'ver', 'si', 'che', 'rung'],
+      icon: '🏥',
+    },
+    {
+      id: 5,
+      word: 'Auseinandersetzung',
+      segments: ['Aus', 'ein', 'an', 'der', 'set', 'zung'],
+      icon: '🤝',
+    },
+    {
+      id: 6,
+      word: 'Geschwindigkeit',
+      segments: ['Ge', 'schwin', 'dig', 'keit'],
+      icon: '🚀',
+    },
+    {
+      id: 7,
+      word: 'Wahrscheinlichkeit',
+      segments: ['Wahr', 'schein', 'lich', 'keit'],
+      icon: '🎲',
+    },
+    {
+      id: 8,
+      word: 'Selbstständigkeit',
+      segments: ['Selbst', 'stän', 'dig', 'keit'],
+      icon: '🏢',
+    },
+    {
+      id: 9,
+      word: 'Wohngemeinschaft',
+      segments: ['Wohn', 'ge', 'mein', 'schaft'],
+      icon: '🏠',
+    },
+    {
+      id: 10,
+      word: 'Informationsgesellschaft',
+      segments: ['In', 'for', 'ma', 'ti', 'ons', 'ge', 'sell', 'schaft'],
+      icon: '💻',
+    },
+    {
+      id: 11,
+      word: 'Gleichberechtigung',
+      segments: ['Gleich', 'be', 'rech', 'ti', 'gung'],
+      icon: '⚖️',
+    },
+    {
+      id: 12,
+      word: 'Bevölkerungswachstum',
+      segments: ['Be', 'völ', 'ke', 'rungs', 'wachs', 'tum'],
+      icon: '📈',
+    },
+    {
+      id: 13,
+      word: 'Zusammenarbeit',
+      segments: ['Zu', 'sam', 'men', 'ar', 'beit'],
+      icon: '🤝',
+    },
+    {
+      id: 14,
+      word: 'Unternehmensführung',
+      segments: ['Un', 'ter', 'neh', 'mens', 'füh', 'rung'],
+      icon: '👔',
+    },
+    {
+      id: 15,
+      word: 'Persönlichkeitsentwicklung',
+      segments: ['Per', 'sön', 'lich', 'keits', 'ent', 'wick', 'lung'],
+      icon: '🌱',
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: WORTBILD (Buchstaben-Scramble)
+  // Orthographische Problemwörter für Erwachsene — ie/ei, ss/ß, Umlaute,
+  // Fremdwörter, stummes h, Doppelkonsonanten.
+  // ─────────────────────────────────────────────────────────────────────────────
+  scrabble: [
+    {
+      id: 1,
+      word: 'RHYTHMUS',
+      scrambled: ['R', 'H', 'Y', 'T', 'H', 'M', 'U', 'S'],
+      image: '🥁',
+    },
+    {
+      id: 2,
+      word: 'PSYCHOLOGIE',
+      scrambled: ['P', 'S', 'Y', 'C', 'H', 'O', 'L', 'O', 'G', 'I', 'E'],
+      image: '🧠',
+    },
+    {
+      id: 3,
+      word: 'VERANTWORTUNG',
+      scrambled: [
+        'V',
+        'E',
+        'R',
+        'A',
+        'N',
+        'T',
+        'W',
+        'O',
+        'R',
+        'T',
+        'U',
+        'N',
+        'G',
+      ],
+      image: '⚖️',
+    },
+    {
+      id: 4,
+      word: 'GLEICHGEWICHT',
+      scrambled: [
+        'G',
+        'L',
+        'E',
+        'I',
+        'C',
+        'H',
+        'G',
+        'E',
+        'W',
+        'I',
+        'C',
+        'H',
+        'T',
+      ],
+      image: '⚖️',
+    },
+    {
+      id: 5,
+      word: 'QUALIFIKATION',
+      scrambled: [
+        'Q',
+        'U',
+        'A',
+        'L',
+        'I',
+        'F',
+        'I',
+        'K',
+        'A',
+        'T',
+        'I',
+        'O',
+        'N',
+      ],
+      image: '🎓',
+    },
+    {
+      id: 6,
+      word: 'BESCHÄFTIGUNG',
+      scrambled: [
+        'B',
+        'E',
+        'S',
+        'C',
+        'H',
+        'Ä',
+        'F',
+        'T',
+        'I',
+        'G',
+        'U',
+        'N',
+        'G',
+      ],
+      image: '💼',
+    },
+    {
+      id: 7,
+      word: 'WAHRSCHEINLICH',
+      scrambled: [
+        'W',
+        'A',
+        'H',
+        'R',
+        'S',
+        'C',
+        'H',
+        'E',
+        'I',
+        'N',
+        'L',
+        'I',
+        'C',
+        'H',
+      ],
+      image: '🎲',
+    },
+    {
+      id: 8,
+      word: 'SELBSTSTÄNDIG',
+      scrambled: [
+        'S',
+        'E',
+        'L',
+        'B',
+        'S',
+        'T',
+        'S',
+        'T',
+        'Ä',
+        'N',
+        'D',
+        'I',
+        'G',
+      ],
+      image: '🏢',
+    },
+    {
+      id: 9,
+      word: 'ZUSAMMENARBEIT',
+      scrambled: [
+        'Z',
+        'U',
+        'S',
+        'A',
+        'M',
+        'M',
+        'E',
+        'N',
+        'A',
+        'R',
+        'B',
+        'E',
+        'I',
+        'T',
+      ],
+      image: '🤝',
+    },
+    {
+      id: 10,
+      word: 'GESELLSCHAFT',
+      scrambled: ['G', 'E', 'S', 'E', 'L', 'L', 'S', 'C', 'H', 'A', 'F', 'T'],
+      image: '👥',
+    },
+    {
+      id: 11,
+      word: 'WIDERSPRÜCHLICH',
+      scrambled: [
+        'W',
+        'I',
+        'D',
+        'E',
+        'R',
+        'S',
+        'P',
+        'R',
+        'Ü',
+        'C',
+        'H',
+        'L',
+        'I',
+        'C',
+        'H',
+      ],
+      image: '🔄',
+    },
+    {
+      id: 12,
+      word: 'CHOREOGRAPHIE',
+      scrambled: [
+        'C',
+        'H',
+        'O',
+        'R',
+        'E',
+        'O',
+        'G',
+        'R',
+        'A',
+        'P',
+        'H',
+        'I',
+        'E',
+      ],
+      image: '💃',
+    },
+    {
+      id: 13,
+      word: 'PFLICHTBEWUSSTSEIN',
+      scrambled: [
+        'P',
+        'F',
+        'L',
+        'I',
+        'C',
+        'H',
+        'T',
+        'B',
+        'E',
+        'W',
+        'U',
+        'S',
+        'S',
+        'T',
+        'S',
+        'E',
+        'I',
+        'N',
+      ],
+      image: '✅',
+    },
+    {
+      id: 14,
+      word: 'AUSSCHLIESSLICH',
+      scrambled: [
+        'A',
+        'U',
+        'S',
+        'S',
+        'C',
+        'H',
+        'L',
+        'I',
+        'E',
+        'S',
+        'S',
+        'L',
+        'I',
+        'C',
+        'H',
+      ],
+      image: '🚫',
+    },
+    {
+      id: 15,
+      word: 'HÖCHSTGESCHWINDIGKEIT',
+      scrambled: [
+        'H',
+        'Ö',
+        'C',
+        'H',
+        'S',
+        'T',
+        'G',
+        'E',
+        'S',
+        'C',
+        'H',
+        'W',
+        'I',
+        'N',
+        'D',
+        'I',
+        'G',
+        'K',
+        'E',
+        'I',
+        'T',
+      ],
+      image: '🏎️',
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: KONTEXT
+  // 15 Sätze mit Berufswortschatz — jeder testet eine spezifische Regel.
+  // ─────────────────────────────────────────────────────────────────────────────
+  context: [
+    {
+      id: 1,
+      sentence_part1: 'Er glaubt,',
+      sentence_part2: 'die neue Regelung rechtzeitig in Kraft tritt.',
+      options: [
+        { text: 'dass', isCorrect: true },
+        { text: 'das', isCorrect: false },
+      ],
+      hints: {
+        de: "‚dass' ist hier eine Konjunktion (Bindewort), man kann es nicht durch dies/jenes ersetzen.",
+        en: "'dass' = subordinating conjunction (that); 'das' = article or pronoun (the/which)",
+      },
+    },
+    {
+      id: 2,
+      sentence_part1: 'Bitte unterschreiben Sie',
+      sentence_part2: 'Dokument auf Seite drei.',
+      options: [
+        { text: 'das', isCorrect: true },
+        { text: 'dass', isCorrect: false },
+      ],
+      hints: {
+        de: "‚das' ist hier der bestimmte Artikel zu dem Wort Dokument.",
+        en: "'das' here = definite article for a neuter noun",
+      },
+    },
+    {
+      id: 3,
+      sentence_part1: 'Das Unternehmen trägt die volle',
+      sentence_part2: 'für den entstandenen Schaden.',
+      options: [
+        { text: 'Verantwortung', isCorrect: true },
+        { text: 'verantwortung', isCorrect: false },
+      ],
+      hints: {
+        de: 'Nomen werden im Deutschen immer großgeschrieben.',
+        en: 'All nouns in German are capitalised — Verantwortung is a noun',
+      },
+    },
+    {
+      id: 4,
+      sentence_part1: 'Die Konferenz findet morgen in',
+      sentence_part2: 'Hauptgebäude statt.',
+      options: [
+        { text: 'unserem', isCorrect: true },
+        { text: 'unserm', isCorrect: false },
+      ],
+      hints: {
+        de: 'Dativ: Die Endung -em muss komplett ausgeschrieben werden (unserem).',
+        en: 'Dative masculine/neuter: unserem — the dative ending -em must be complete',
+      },
+    },
+    {
+      id: 5,
+      sentence_part1: 'Die neue Regelung',
+      sentence_part2: 'alle Mitarbeiterinnen und Mitarbeiter.',
+      options: [
+        { text: 'betrifft', isCorrect: true },
+        { text: 'betrift', isCorrect: false },
+      ],
+      hints: {
+        de: 'Nach dem kurzen i wird der Konsonant f verdoppelt (ff).',
+        en: 'treffen → betreffen → betrifft: the double f comes from the short vowel before it',
+      },
+    },
+    {
+      id: 6,
+      sentence_part1: 'Herr Müller hat seinen',
+      sentence_part2: 'bereits unterschrieben.',
+      options: [
+        { text: 'Arbeitsvertrag', isCorrect: true },
+        { text: 'Arbeits Vertrag', isCorrect: false },
+      ],
+      hints: {
+        de: 'Zusammengesetzte Nomen (Komposita) werden im Deutschen zusammen geschrieben.',
+        en: 'German compound nouns are always written as one word, never separated',
+      },
+    },
+    {
+      id: 7,
+      sentence_part1: 'Das Projekt wurde',
+      sentence_part2: 'abgeschlossen.',
+      options: [
+        { text: 'erfolgreich', isCorrect: true },
+        { text: 'Erfolgreich', isCorrect: false },
+      ],
+      hints: {
+        de: 'Adjektive und Adverbien werden im Deutschen kleingeschrieben.',
+        en: 'erfolgreich is an adjective/adverb — adjectives and adverbs are NOT capitalised in German',
+      },
+    },
+    {
+      id: 8,
+      sentence_part1: 'Die Bewerberin verfügt über eine hervorragende',
+      sentence_part2: 'im Projektmanagement.',
+      options: [
+        { text: 'Qualifikation', isCorrect: true },
+        { text: 'Qualifiqation', isCorrect: false },
+      ],
+      hints: {
+        de: 'Die Endung -tion wird immer mit t geschrieben, nie mit q oder z.',
+        en: 'Foreign suffix -tion is always written with t (never z or q)',
+      },
+    },
+    {
+      id: 9,
+      sentence_part1: 'Das Auto fuhr mit hoher',
+      sentence_part2: 'durch die Stadt.',
+      options: [
+        { text: 'Geschwindigkeit', isCorrect: true },
+        { text: 'Geschwindichkeit', isCorrect: false },
+      ],
+      hints: {
+        de: 'Die Endung ist -igkeit (geschwind + ig + keit), nicht -ichkeit.',
+        en: 'The suffix is -igkeit (from geschwind + ig + keit), not -ichkeit',
+      },
+    },
+    {
+      id: 10,
+      sentence_part1: 'Die Krankenversicherung',
+      sentence_part2: 'die Kosten für die Operation.',
+      options: [
+        { text: 'übernimmt', isCorrect: true },
+        { text: 'übernimpt', isCorrect: false },
+      ],
+      hints: {
+        de: 'Kommt von nehmen. In der 3. Person Singular wird das m verdoppelt (nimmt).',
+        en: 'From nehmen: the m is doubled in the 3rd person singular (nimmt).',
+      },
+    },
+    {
+      id: 11,
+      sentence_part1: 'Sie müssen den Antrag bis zum',
+      sentence_part2: 'dieses Monats einreichen.',
+      options: [
+        { text: 'dreißigsten', isCorrect: true },
+        { text: 'dreissigsten', isCorrect: false },
+      ],
+      hints: {
+        de: "Nach dem Diphthong (Doppellaut) 'ei' steht ein 'ß', kein 'ss'.",
+        en: "ß after a long vowel/diphthong in dreißig — after 'ei' (a diphthong) we use ß not ss",
+      },
+    },
+    {
+      id: 12,
+      sentence_part1: 'Die Mitarbeiterin ist seit Jahren',
+      sentence_part2: 'tätig.',
+      options: [
+        { text: 'selbstständig', isCorrect: true },
+        { text: 'selbstständig', isCorrect: true },
+      ],
+      hints: {
+        de: 'Sowohl selbstständig als auch selbständig sind korrekte Schreibweisen.',
+        en: 'selbstständig: both forms (selbständig and selbstständig) are correct in modern German',
+      },
+    },
+    {
+      id: 13,
+      sentence_part1: 'Es ist',
+      sentence_part2: ', dass alle Beteiligten informiert werden.',
+      options: [
+        { text: 'wichtig', isCorrect: true },
+        { text: 'Wichtig', isCorrect: false },
+      ],
+      hints: {
+        de: 'Als Adjektiv wird ‚wichtig‘ hier kleingeschrieben.',
+        en: 'wichtig is a predicate adjective here — adjectives are never capitalised in German',
+      },
+    },
+    {
+      id: 14,
+      sentence_part1: 'Die Besprechung wurde auf',
+      sentence_part2: 'verschoben.',
+      options: [
+        { text: 'morgen', isCorrect: true },
+        { text: 'Morgen', isCorrect: false },
+      ],
+      hints: {
+        de: 'Hier ist ‚morgen‘ ein Adverb (der nächste Tag) und wird kleingeschrieben.',
+        en: 'morgen (tomorrow) is an adverb here — adverbs are lowercase; Morgen (morning) is the noun',
+      },
+    },
+    {
+      id: 15,
+      sentence_part1: 'Wir erwarten,',
+      sentence_part2: 'Sie die Unterlagen rechtzeitig einreichen.',
+      options: [
+        { text: 'dass', isCorrect: true },
+        { text: 'das', isCorrect: false },
+      ],
+      hints: {
+        de: '‚dass‘ leitet hier einen Nebensatz ein.',
+        en: "'dass' introduces a subordinate clause here — test: can you replace it with 'that'?",
+      },
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: UHR
+  // 15 Aufgaben zum Ablesen analoger Uhren.
+  // hourRotation und minuteRotation = Grad im Uhrzeigersinn ab 12.
+  // ─────────────────────────────────────────────────────────────────────────────
+  clock: [
+    {
+      id: 1,
+      timeAnalog: 'Viertel nach drei',
+      isNight: false,
+      hourRotation: 98,
+      minuteRotation: 90,
+      options: [
+        { text: '3:15 Uhr', isCorrect: true },
+        { text: '15:15 Uhr', isCorrect: false },
+        { text: '3:45 Uhr', isCorrect: false },
+        { text: '2:45 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 2,
+      timeAnalog: 'Halb sieben am Abend',
+      isNight: true,
+      hourRotation: 195,
+      minuteRotation: 180,
+      options: [
+        { text: '18:30 Uhr', isCorrect: true },
+        { text: '6:30 Uhr', isCorrect: false },
+        { text: '19:30 Uhr', isCorrect: false },
+        { text: '17:30 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 3,
+      timeAnalog: 'Zehn vor zehn am Morgen',
+      isNight: false,
+      hourRotation: 295,
+      minuteRotation: 300,
+      options: [
+        { text: '9:50 Uhr', isCorrect: true },
+        { text: '10:10 Uhr', isCorrect: false },
+        { text: '21:50 Uhr', isCorrect: false },
+        { text: '10:50 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 4,
+      timeAnalog: 'Mittag',
+      isNight: false,
+      hourRotation: 0,
+      minuteRotation: 0,
+      options: [
+        { text: '12:00 Uhr', isCorrect: true },
+        { text: '0:00 Uhr', isCorrect: false },
+        { text: '12:30 Uhr', isCorrect: false },
+        { text: '6:00 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 5,
+      timeAnalog: 'Mitternacht',
+      isNight: true,
+      hourRotation: 0,
+      minuteRotation: 0,
+      options: [
+        { text: '0:00 Uhr', isCorrect: true },
+        { text: '12:00 Uhr', isCorrect: false },
+        { text: '23:59 Uhr', isCorrect: false },
+        { text: '1:00 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 6,
+      timeAnalog: 'Halb eins am Nachmittag',
+      isNight: false,
+      hourRotation: 15,
+      minuteRotation: 180,
+      options: [
+        { text: '12:30 Uhr', isCorrect: true },
+        { text: '0:30 Uhr', isCorrect: false },
+        { text: '1:30 Uhr', isCorrect: false },
+        { text: '11:30 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 7,
+      timeAnalog: 'Viertel vor neun am Abend',
+      isNight: true,
+      hourRotation: 262,
+      minuteRotation: 270,
+      options: [
+        { text: '20:45 Uhr', isCorrect: true },
+        { text: '8:45 Uhr', isCorrect: false },
+        { text: '21:15 Uhr', isCorrect: false },
+        { text: '21:45 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 8,
+      timeAnalog: 'Zwanzig nach vier am Nachmittag',
+      isNight: false,
+      hourRotation: 130,
+      minuteRotation: 120,
+      options: [
+        { text: '16:20 Uhr', isCorrect: true },
+        { text: '4:20 Uhr', isCorrect: false },
+        { text: '16:40 Uhr', isCorrect: false },
+        { text: '17:20 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 9,
+      timeAnalog: 'Fünf nach halb zwölf in der Nacht',
+      isNight: true,
+      hourRotation: 347,
+      minuteRotation: 210,
+      options: [
+        { text: '23:35 Uhr', isCorrect: true },
+        { text: '11:35 Uhr', isCorrect: false },
+        { text: '23:25 Uhr', isCorrect: false },
+        { text: '0:35 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 10,
+      timeAnalog: 'Sechs Uhr abends',
+      isNight: true,
+      hourRotation: 180,
+      minuteRotation: 0,
+      options: [
+        { text: '18:00 Uhr', isCorrect: true },
+        { text: '6:00 Uhr', isCorrect: false },
+        { text: '19:00 Uhr', isCorrect: false },
+        { text: '17:00 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 11,
+      timeAnalog: 'Fünf vor halb zehn am Abend',
+      isNight: true,
+      hourRotation: 283,
+      minuteRotation: 150,
+      options: [
+        { text: '21:25 Uhr', isCorrect: true },
+        { text: '9:25 Uhr', isCorrect: false },
+        { text: '21:35 Uhr', isCorrect: false },
+        { text: '22:25 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 12,
+      timeAnalog: 'Viertel nach elf am Morgen',
+      isNight: false,
+      hourRotation: 338,
+      minuteRotation: 90,
+      options: [
+        { text: '11:15 Uhr', isCorrect: true },
+        { text: '23:15 Uhr', isCorrect: false },
+        { text: '10:45 Uhr', isCorrect: false },
+        { text: '11:45 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 13,
+      timeAnalog: 'Zehn vor fünf am Morgen',
+      isNight: false,
+      hourRotation: 145,
+      minuteRotation: 300,
+      options: [
+        { text: '4:50 Uhr', isCorrect: true },
+        { text: '16:50 Uhr', isCorrect: false },
+        { text: '5:10 Uhr', isCorrect: false },
+        { text: '4:40 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 14,
+      timeAnalog: 'Halb neun am Morgen',
+      isNight: false,
+      hourRotation: 255,
+      minuteRotation: 180,
+      options: [
+        { text: '8:30 Uhr', isCorrect: true },
+        { text: '20:30 Uhr', isCorrect: false },
+        { text: '9:30 Uhr', isCorrect: false },
+        { text: '7:30 Uhr', isCorrect: false },
+      ],
+    },
+    {
+      id: 15,
+      timeAnalog: 'Fünfundzwanzig nach eins in der Nacht',
+      isNight: true,
+      hourRotation: 43,
+      minuteRotation: 150,
+      options: [
+        { text: '1:25 Uhr', isCorrect: true },
+        { text: '13:25 Uhr', isCorrect: false },
+        { text: '1:35 Uhr', isCorrect: false },
+        { text: '0:25 Uhr', isCorrect: false },
+      ],
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: SEQUENZEN
+  // Chronologische Ordnung, Handlungsplanung und auditives Gedächtnis —
+  // Berufs- und Alltagswortschatz für Erwachsene.
+  // ─────────────────────────────────────────────────────────────────────────────
+  sequences: [
+    // Arbeitsgedächtnis
+    {
+      id: 'mem_span_1',
+      instruction: 'Merke dir die Reihenfolge — jetzt umkehren!',
+      displayItems: ['📋', '💼', '✅'],
+      correct: ['✅', '💼', '📋'],
+      scrambled: ['📋', '💼', '✅'],
+      displayTime: 3000,
+    },
+
+    // Chronologie & Semantik
+    {
+      id: 1,
+      instruction: 'Ordne die Wochentage in die richtige Reihenfolge',
+      scrambled: ['Mittwoch', 'Montag', 'Freitag', 'Dienstag'],
+      correct: ['Montag', 'Dienstag', 'Mittwoch', 'Freitag'],
+    },
+
+    {
+      id: 2,
+      instruction: 'Ordne die Monate des zweiten Quartals',
+      scrambled: ['Juni', 'April', 'Mai'],
+      correct: ['April', 'Mai', 'Juni'],
+    },
+
+    {
+      id: 3,
+      instruction: 'Karrierestufen — niedrigste zuerst',
+      scrambled: [
+        'Abteilungsleiter',
+        'Praktikant',
+        'Geschäftsführer',
+        'Fachkraft',
+      ],
+      correct: [
+        'Praktikant',
+        'Fachkraft',
+        'Abteilungsleiter',
+        'Geschäftsführer',
+      ],
+    },
+
+    {
+      id: 4,
+      instruction: 'Schritte einer Bewerbung',
+      scrambled: [
+        'Vorstellungsgespräch',
+        'Lebenslauf schreiben',
+        'Zusage erhalten',
+        'Stelle ausschreiben lesen',
+      ],
+      correct: [
+        'Stelle ausschreiben lesen',
+        'Lebenslauf schreiben',
+        'Vorstellungsgespräch',
+        'Zusage erhalten',
+      ],
+    },
+
+    {
+      id: 5,
+      instruction: 'Beträge vom kleinsten zum größten',
+      scrambled: ['1.000.000 €', '500 €', '10.000 €', '75 €'],
+      correct: ['75 €', '500 €', '10.000 €', '1.000.000 €'],
+    },
+
+    {
+      id: 6,
+      instruction: 'Schritte beim Abschluss eines Mietvertrags',
+      scrambled: [
+        'Kaution überweisen',
+        'Wohnung besichtigen',
+        'Vertrag unterzeichnen',
+        'Schlüssel erhalten',
+      ],
+      correct: [
+        'Wohnung besichtigen',
+        'Vertrag unterzeichnen',
+        'Kaution überweisen',
+        'Schlüssel erhalten',
+      ],
+    },
+
+    {
+      id: 7,
+      instruction: 'Zeiteinheiten — kürzeste zuerst',
+      scrambled: ['Jahrhundert', 'Sekunde', 'Jahrzehnt', 'Jahr'],
+      correct: ['Sekunde', 'Jahr', 'Jahrzehnt', 'Jahrhundert'],
+    },
+
+    {
+      id: 8,
+      instruction: 'Bringe die Wörter in die richtige Satzreihenfolge',
+      scrambled: [
+        'den',
+        'hat',
+        'rechtzeitig',
+        'Bericht',
+        'Sie',
+        'eingereicht.',
+      ],
+      correct: ['Sie', 'hat', 'den', 'Bericht', 'rechtzeitig', 'eingereicht.'],
+    },
+
+    {
+      id: 9,
+      instruction: 'Phasen eines Projekts (klassisches PM)',
+      scrambled: ['Abschluss', 'Planung', 'Durchführung', 'Initiierung'],
+      correct: ['Initiierung', 'Planung', 'Durchführung', 'Abschluss'],
+    },
+
+    {
+      id: 10,
+      instruction: 'Alphabetische Reihenfolge — Berufswörter',
+      scrambled: ['Vertrag', 'Rechnung', 'Angebot', 'Protokoll'],
+      correct: ['Angebot', 'Protokoll', 'Rechnung', 'Vertrag'],
+    },
+
+    // Auditive Sequenzen
+    {
+      id: 11,
+      instruction: 'Höre zu und ordne die Zahlen in der gehörten Reihenfolge',
+      audioPrompt: 'Sieben. Drei. Neun. Eins.',
+      scrambled: ['1', '9', '7', '3'],
+      correct: ['7', '3', '9', '1'],
+    },
+
+    {
+      id: 12,
+      instruction: 'Höre zu und ordne die Wörter in der gehörten Reihenfolge',
+      audioPrompt: 'Rechnung, Budget, Bericht, Besprechung.',
+      scrambled: ['Bericht', 'Rechnung', 'Besprechung', 'Budget'],
+      correct: ['Rechnung', 'Budget', 'Bericht', 'Besprechung'],
+    },
+
+    {
+      id: 13,
+      instruction: 'Höre die Anweisung und ordne die Schritte',
+      audioPrompt:
+        'Zuerst das Dokument speichern, dann als Anhang hinzufügen, zuletzt auf Senden drücken.',
+      scrambled: [
+        'Auf Senden drücken',
+        'Dokument speichern',
+        'Als Anhang hinzufügen',
+      ],
+      correct: [
+        'Dokument speichern',
+        'Als Anhang hinzufügen',
+        'Auf Senden drücken',
+      ],
+    },
+
+    {
+      id: 14,
+      instruction: 'Höre zu und ordne die buchstabierten Buchstaben',
+      audioPrompt: 'V. E. R. T. R. A. G.',
+      scrambled: ['T', 'V', 'A', 'R', 'G', 'E', 'R'],
+      correct: ['V', 'E', 'R', 'T', 'R', 'A', 'G'],
+    },
+
+    {
+      id: 15,
+      instruction: 'Historische Epochen Deutschlands — älteste zuerst',
+      scrambled: [
+        'Kaiserreich',
+        'Mittelalter',
+        'Bundesrepublik',
+        'Weimarer Republik',
+      ],
+      correct: [
+        'Mittelalter',
+        'Kaiserreich',
+        'Weimarer Republik',
+        'Bundesrepublik',
+      ],
+    },
+  ],
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KATEGORIE: TRACKING
+  // Räumliche Schnellentscheidung — Lateralisation, b/d/p/q, Groß-/Kleinbuchstaben,
+  // Vokal/Konsonant, gerade/ungerade, Umlaut ja/nein.
+  // ─────────────────────────────────────────────────────────────────────────────
+  tracking: [
+    {
+      id: 1,
+      instruction: 'Auf welcher Seite ist der Bauch des Buchstabens?',
+      items: [
+        { symbol: 'b', target: 'right' },
+        { symbol: 'd', target: 'left' },
+        { symbol: 'd', target: 'left' },
+        { symbol: 'b', target: 'right' },
+        { symbol: 'd', target: 'left' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 2,
+      instruction: 'In welche Richtung zeigt der Pfeil?',
+      items: [
+        { symbol: '→', target: 'right' },
+        { symbol: '←', target: 'left' },
+        { symbol: '→', target: 'right' },
+        { symbol: '→', target: 'right' },
+        { symbol: '←', target: 'left' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 3,
+      instruction: 'Wo ist der Bauch bei diesem Buchstaben?',
+      items: [
+        { symbol: 'p', target: 'right' },
+        { symbol: 'q', target: 'left' },
+        { symbol: 'p', target: 'right' },
+        { symbol: 'q', target: 'left' },
+        { symbol: 'q', target: 'left' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 4,
+      instruction: 'In welche Richtung zeigt die Hand?',
+      items: [
+        { symbol: '👈', target: 'left' },
+        { symbol: '👉', target: 'right' },
+        { symbol: '👈', target: 'left' },
+        { symbol: '👈', target: 'left' },
+        { symbol: '👉', target: 'right' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 5,
+      instruction: 'Lies das Wort und drücke die richtige Richtung',
+      items: [
+        { symbol: 'RECHTS', target: 'right' },
+        { symbol: 'LINKS', target: 'left' },
+        { symbol: 'LINKS', target: 'left' },
+        { symbol: 'RECHTS', target: 'right' },
+        { symbol: 'LINKS', target: 'left' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 6,
+      instruction: 'In welche Richtung zeigt das Dreieck?',
+      items: [
+        { symbol: '◁', target: 'left' },
+        { symbol: '▷', target: 'right' },
+        { symbol: '▷', target: 'right' },
+        { symbol: '◁', target: 'left' },
+        { symbol: '▷', target: 'right' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 7,
+      instruction: 'Daumen hoch oder runter?',
+      items: [
+        { symbol: '👍', target: 'up' },
+        { symbol: '👎', target: 'down' },
+        { symbol: '👍', target: 'up' },
+        { symbol: '👍', target: 'up' },
+        { symbol: '👎', target: 'down' },
+      ],
+      options: [
+        { label: 'Hoch ⬆️', value: 'up' },
+        { label: 'Runter ⬇️', value: 'down' },
+      ],
+    },
+    {
+      id: 8,
+      instruction: 'Wo ist die eckige Klammer geöffnet?',
+      items: [
+        { symbol: '[', target: 'right' },
+        { symbol: ']', target: 'left' },
+        { symbol: '[', target: 'right' },
+        { symbol: ']', target: 'left' },
+        { symbol: ']', target: 'left' },
+      ],
+      options: [
+        { label: 'Links ⬅️', value: 'left' },
+        { label: 'Rechts ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 9,
+      instruction: 'In welche Richtung zeigt der senkrechte Pfeil?',
+      items: [
+        { symbol: '↑', target: 'up' },
+        { symbol: '↓', target: 'down' },
+        { symbol: '↑', target: 'up' },
+        { symbol: '↑', target: 'up' },
+        { symbol: '↓', target: 'down' },
+      ],
+      options: [
+        { label: 'Hoch ⬆️', value: 'up' },
+        { label: 'Runter ⬇️', value: 'down' },
+      ],
+    },
+    {
+      id: 10,
+      instruction: 'In welche Richtung lehnt der Schrägstrich?',
+      items: [
+        { symbol: '/', target: 'right' },
+        { symbol: '\\', target: 'left' },
+        { symbol: '/', target: 'right' },
+        { symbol: '\\', target: 'left' },
+        { symbol: '/', target: 'right' },
+      ],
+      options: [
+        { label: 'Links (\\) ⬅️', value: 'left' },
+        { label: 'Rechts (/) ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 11,
+      instruction: 'Groß- oder Kleinbuchstabe?',
+      items: [
+        { symbol: 'A', target: 'up' },
+        { symbol: 'a', target: 'down' },
+        { symbol: 'B', target: 'up' },
+        { symbol: 'b', target: 'down' },
+        { symbol: 'A', target: 'up' },
+      ],
+      options: [
+        { label: 'Groß 🔠', value: 'up' },
+        { label: 'Klein 🔡', value: 'down' },
+      ],
+    },
+    {
+      id: 12,
+      instruction: 'Gerade oder ungerade Zahl?',
+      items: [
+        { symbol: '4', target: 'left' },
+        { symbol: '7', target: 'right' },
+        { symbol: '2', target: 'left' },
+        { symbol: '9', target: 'right' },
+        { symbol: '6', target: 'left' },
+      ],
+      options: [
+        { label: 'Gerade ⬅️', value: 'left' },
+        { label: 'Ungerade ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 13,
+      instruction: 'Vokal oder Konsonant?',
+      items: [
+        { symbol: 'E', target: 'up' },
+        { symbol: 'K', target: 'down' },
+        { symbol: 'A', target: 'up' },
+        { symbol: 'R', target: 'down' },
+        { symbol: 'I', target: 'up' },
+      ],
+      options: [
+        { label: 'Vokal ⬆️', value: 'up' },
+        { label: 'Konsonant ⬇️', value: 'down' },
+      ],
+    },
+    {
+      id: 14,
+      instruction: 'Umlaut (ä, ö, ü, ß) oder normaler Buchstabe?',
+      items: [
+        { symbol: 'ä', target: 'right' },
+        { symbol: 'a', target: 'left' },
+        { symbol: 'ö', target: 'right' },
+        { symbol: 'o', target: 'left' },
+        { symbol: 'ß', target: 'right' },
+      ],
+      options: [
+        { label: 'Normal ⬅️', value: 'left' },
+        { label: 'Umlaut ➡️', value: 'right' },
+      ],
+    },
+    {
+      id: 15,
+      instruction: 'Arabische oder römische Ziffer?',
+      items: [
+        { symbol: 'V', target: 'right' },
+        { symbol: '5', target: 'left' },
+        { symbol: 'X', target: 'right' },
+        { symbol: '10', target: 'left' },
+        { symbol: 'I', target: 'right' },
+      ],
+      options: [
+        { label: 'Arabisch ⬅️', value: 'left' },
+        { label: 'Römisch ➡️', value: 'right' },
+      ],
+    },
+  ],
+};

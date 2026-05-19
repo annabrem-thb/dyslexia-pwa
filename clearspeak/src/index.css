@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Import darmowej czcionki OpenDyslexic przez CDN (szybkie i stabilne) */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/opendyslexic@3.0.0/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/npm/opendyslexic@3.0.0/fonts/OpenDyslexic-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/opendyslexic@3.0.0/fonts/OpenDyslexic-Bold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/npm/opendyslexic@3.0.0/fonts/OpenDyslexic-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #fdfaf6; /* LRS: Kremowe, matowe tło zmniejszające zmęczenie wzroku (odblask) */
+  color: #1e293b;            /* LRS: Miękki ciemnoszary (slate-800) zamiast czystej czerni */
+  
+  /* LRS: Czcionka przyjazna dysleksji z bezpiecznymi fallbackami */
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Lexend', sans-serif;
+  
+  /* LRS: Optymalizacja przestrzeni poznawczej (Cognitive Spacing) */
+  letter-spacing: 0.04em;    /* Większy odstęp między znakami (redukcja 'zlewania się') */
+  word-spacing: 0.12em;      /* Zwiększone odstępy między słowami */
+  line-height: 1.65;         /* Zwiększona interlinia (ułatwia trzymanie się wiersza) */
+  
+  /* LRS: Wygładzanie krawędzi dla specyficznego kształtu OpenDyslexic */
+  -webkit-font-smoothing: antialiased;
+  
+  /* LRS: Zakaz justowania tekstu. Justowanie tworzy tzw. "rzeki bieli" (rivers of white),
+     które drastycznie utrudniają czytanie osobom z dysleksją. */
+  text-align: left !important;
+}
+
+/* LRS: Kursywa (italic) zniekształca kształt liter. W trybie LRS zastępujemy ją 
+   wyraźniejszym pogrubieniem i kolorem, aby ułatwić percepcję. */
+em, i {
+  font-style: normal;
+  font-weight: 700;
+  color: #4338ca; /* Indigo-700 - łatwo odróżnialny, ale nie 'krzyczący' (nie czerwony) */
+}
+
+/* --- Globalne style dostępności (Keyboard Navigation) --- */
+@layer base {
+  *:focus-visible {
+    outline: 4px solid #818cf8; /* Widoczny, fioletowo-niebieski pierścień (Tailwind: indigo-400) */
+    outline-offset: 4px;
+  }
+  
+  html[data-a11y-contrast="true"] *:focus-visible {
+    outline: 5px solid #22c55e; /* Jaskrawozielony, wyraźny w wysokim kontraście (Tailwind: green-500) */
+    outline-offset: 4px;
+  }
+}
