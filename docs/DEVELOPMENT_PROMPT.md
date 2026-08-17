@@ -510,11 +510,18 @@ auf der die zentrale Forschungsfrage der Thesis beruht.
       vorhandenen, aber bis dahin nirgends verdrahteten Keys `listenCarefully`
       für Dictation. Instruktionen werden sowohl sichtbar angezeigt als auch —
       wo sinnvoll ohne bei jedem Replay lästig zu wiederholen — in die
-      `useAutoReadAloud`-Vorlesefunktion aufgenommen. Dabei entdeckt:
-      `MemorySpanExercise.jsx` ist toter Code (in `ExerciseContainer.jsx` an
-      keiner Stelle verdrahtet, kein Vokabular-Eintrag mit passendem `type`) —
-      für echte Nutzer:innen nie erreichbar, daher hier nicht mit einer
-      Instruktion versehen.
+      `useAutoReadAloud`-Vorlesefunktion aufgenommen.
+      **Korrektur (Audit vom 2026-08-17):** Der ursprüngliche Eintrag hier
+      behauptete, `MemorySpanExercise.jsx` sei toter Code. Das war falsch:
+      die Komponente ist in `ExerciseContainer.jsx`s `EXERCISE_COMPONENTS`
+      unter `memorySpan: MemorySpanExercise` verdrahtet, und
+      `vocabulary_en.js`/`vocabulary_de.js`/`vocabulary_pl.js` enthalten
+      jeweils einen `memorySpan`-Block mit passenden `type: 'memorySpan'`-
+      Einträgen — für echte Nutzer:innen also durchaus erreichbar. Eine
+      separate `*Instruction`-i18n-Key-Ergänzung war hier trotzdem nicht
+      nötig: jeder Vokabular-Eintrag trägt bereits ein eigenes
+      `instruction`-Feld, das sowohl sichtbar angezeigt als auch (nur in der
+      Abfragephase, siehe 2.6) automatisch vorgelesen wird.
 - [x] ~~SUS-Fragebogen ergänzen~~ — **bereits vorhanden** in
       `SurveyComponent.tsx` (siehe 3.3). Ursprünglich fälschlich als fehlend
       geführt.
